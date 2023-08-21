@@ -549,7 +549,7 @@ import socket, threading, thread, select, signal, sys, time, getopt
 LISTENING_ADDR = '0.0.0.0'
 LISTENING_PORT = 80
 
-PASS = ''
+PASS = 'KaldagVPN'
 
 # CONST
 BUFLEN = 4096 * 4
@@ -915,8 +915,8 @@ EOM
 <body>
 <div class="container" style="padding-top: 50px">
 <div class="jumbotron">
-<h1 class="display-3 text-center fn-color">MikSoft</h1>
-<h4 class="text-center fn-color">By Michaele Abalos</h4>
+<h1 class="display-3 text-center fn-color">KaldagVPN</h1>
+<h4 class="text-center fn-color">By Joebert Morales</h4>
 </div>
 </div>
 </body>
@@ -971,7 +971,7 @@ user_name=`mysql -u $USER -p$PASS -D $DB -h $HOST -sN -e "$Query"`
 [ "$user_name" != '' ] && [ "$user_name" = "$username" ] && echo "user : $username" && echo 'authentication ok.' && exit 0 || echo 'authentication failed.'; exit 1
 EOM
 chmod 755 /etc/openvpn/script/login.sh
-fun_bar3 'final'
+fun_bar3 'ports'
 echo -e "                $GREEN 1) PREMIUM Done Installing$RESET";
 break ;;
 VIP,*|*,VIP) 
