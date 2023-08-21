@@ -971,7 +971,7 @@ user_name=`mysql -u $USER -p$PASS -D $DB -h $HOST -sN -e "$Query"`
 [ "$user_name" != '' ] && [ "$user_name" = "$username" ] && echo "user : $username" && echo 'authentication ok.' && exit 0 || echo 'authentication failed.'; exit 1
 EOM
 chmod 755 /etc/openvpn/script/login.sh
-final
+
 echo -e "                $GREEN 1) PREMIUM Done Installing$RESET";
 break ;;
 VIP,*|*,VIP) 
