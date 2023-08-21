@@ -295,9 +295,10 @@ tls-server
 port 1194
 proto tcp 
 duplicate-cn
+dev tproto tcp 
+duplicate-cn
 dev tun
 keepalive 1 180
-comp-lzo
 resolv-retry infinite 
 max-clients 1000
 ca /etc/openvpn/keys/ca.crt 
@@ -309,15 +310,13 @@ username-as-common-name
 auth-user-pass-verify /etc/openvpn/script/login.sh via-env
 tmp-dir "/etc/openvpn/" # 
 server 172.20.0.0 255.255.0.0
-push "redirect-gateway def1" 
-push "dhcp-option DNS 8.8.8.8"
-push "dhcp-option DNS 8.8.4.4"
-push "sndbuf 393216"
-push "rcvbuf 393216"
-tun-mtu 1400 
-mssfix 1360
+push "redirect-gateway def1 bypass-dhcp"
+push "dhcp-option DNS 1.1.1.1"
+push "cipher AES-128-CBC"
+push "sndbuf 0"
+push "rcvbuf 0"
+push "socket-flags TCP_NODELAY"
 verb 3
-script-security 3
 cipher AES-128-CBC
 tcp-nodelay
 up /etc/openvpn/update-resolv-conf                                                                                      
@@ -328,8 +327,8 @@ mode server
 tls-server 
 port 110
 proto udp
-dev tun
 duplicate-cn
+dev tun
 keepalive 1 180
 resolv-retry infinite 
 max-clients 1000
@@ -341,18 +340,16 @@ client-cert-not-required
 username-as-common-name 
 auth-user-pass-verify /etc/openvpn/script/login.sh via-env
 tmp-dir "/etc/openvpn/" # 
-server 172.30.0.0 255.255.0.0
-push "redirect-gateway def1" 
-push "dhcp-option DNS 8.8.8.8"
-push "dhcp-option DNS 8.8.4.4"
-push "sndbuf 393216"
-push "rcvbuf 393216"
-tun-mtu 1400 
-mssfix 1360
+server 172.20.0.0 255.255.0.0
+push "redirect-gateway def1 bypass-dhcp"
+push "dhcp-option DNS 1.1.1.1"
+push "cipher AES-128-CBC"
+push "sndbuf 0"
+push "rcvbuf 0"
+push "socket-flags TCP_NODELAY"
 verb 3
 cipher AES-128-CBC
 tcp-nodelay
-script-security 3
 up /etc/openvpn/update-resolv-conf                                                                                      
 down /etc/openvpn/update-resolv-conf
 EOF
@@ -846,7 +843,6 @@ persist-key
 persist-tun
 auth-user-pass
 auth-nocache
-cipher AES-128-CBC
 setenv CLIENT_CERT 0
 verb 3
 # OVPN_ACCESS_SERVER_PROFILE=VPN'S
