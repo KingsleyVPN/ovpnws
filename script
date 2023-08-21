@@ -842,16 +842,10 @@ remote $MYIP 1194
 remote-cert-tls server
 connect-retry infinite
 resolv-retry infinite
-nobind
-ping-timer-rem
-redirect-gateway def1
-tun-mtu 1500
-mssfix 1460
 persist-key
 persist-tun
 auth-user-pass
 auth-nocache
-script-security 3
 cipher AES-128-CBC
 setenv CLIENT_CERT 0
 verb 3
