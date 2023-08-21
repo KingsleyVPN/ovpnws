@@ -72,9 +72,9 @@ echo -e "                $GREEN
 $RESET"
 echo -e "${RED}#############################################${RESET}"
 echo -e "${GREEN}=============================================${RESET}"
-echo -e "${BLUE}#      SCRIPT MODIFIED BY: KINGSLEY VPN     #${RESET}"
+echo -e "${BLACK}#      SCRIPT MODIFIED BY: KINGSLEY VPN     #${RESET}"
 echo -e "${GREEN}=============================================${RESET}"
-echo -e "${BLUE}#            👑 LEAKERS KING 👑             #${RESET}"
+echo -e "${BLACK}#            👑 LEAKERS KING 👑             #${RESET}"
 echo -e "${GREEN}=============================================${RESET}"
 echo -e "${RED}#############################################${RESET}"
 }
@@ -114,11 +114,11 @@ servercert='Certificate:
         Version: 3 (0x2)
         Serial Number: 1 (0x1)
     Signature Algorithm: sha256WithRSAEncryption
-        Issuer: C=PH, ST=Batangas, L=Batangas, O=SavageVPN, OU=SavageVPN, CN=savage-vpn.tk/name=server/emailAddress=savage99@gmail.com
+        Issuer: C=PH, ST=Guimba, L=Nueva Ecija, O=KaldagVPN, OU=KaldagVPN, CN=kaldag-vpn.cloud/name=server/emailAddress=kaldagvpn@gmail.com
         Validity
             Not Before: Apr 20 04:53:44 2018 GMT
             Not After : Apr 17 04:53:44 2028 GMT
-        Subject: C=PH, ST=Batangas, L=Batangas, O=SavageVPN, OU=SavageVPN, CN=savage-vpn.tk/name=server/emailAddress=savage99@gmail.com
+        Subject: C=PH, ST=Guimba, L=Nueva Ecija, O=KaldagVPN, OU=KaldagVPN, CN=kaldag-vpn.cloud/name=server/emailAddress=kaldagvpn@gmail.com
         Subject Public Key Info:
             Public Key Algorithm: rsaEncryption
                 Public-Key: (2048 bit)
@@ -153,7 +153,7 @@ servercert='Certificate:
                 0C:4B:B3:78:75:C7:5E:C8:16:D2:A7:BC:8E:15:3F:33:E3:58:19:04
             X509v3 Authority Key Identifier: 
                 keyid:30:B7:64:91:7B:B4:F6:D0:F5:25:03:32:6E:8F:D2:1C:57:9A:F3:48
-                DirName:/C=PH/ST=Batangas/L=Batangas/O=SavageVPN/OU=SavageVPN/CN=savage-vpn.tk/name=server/emailAddress=savage99@gmail.com
+                DirName:/C=PH/ST=Guimba/L=Nueva Ecija/O=KaldagVPN/OU=KaldagVPN/CN=kaldag-vpn.cloud/name=server/emailAddress=kaldagvpn@gmail.com
                 serial:FD:06:2F:29:CE:AA:6D:FC
 
             X509v3 Extended Key Usage: 
@@ -542,7 +542,7 @@ apt-get install netcat lsof php php-mysqli php-mysql php-gd php-mbstring python 
 cat << \websock > /usr/local/sbin/proxy.py
 #!/usr/bin/env python3
 # encoding: utf-8
-# SocksProxy By: Michaele Abalos
+# SocksProxy By: Joebert Morales
 import socket, threading, thread, select, signal, sys, time, getopt
 
 # CONFIG
@@ -846,7 +846,7 @@ auth-user-pass
 auth-nocache
 setenv CLIENT_CERT 0
 verb 3
-# OVPN_ACCESS_SERVER_PROFILE=VPN'S
+# OVPN_ACCESS_SERVER_PROFILE=KaldagVPN
 <ca>
 -----BEGIN CERTIFICATE-----
 MIIE5TCCA82gAwIBAgIJAP0GLynOqm38MA0GCSqGSIb3DQEBCwUAMIGnMQswCQYD
@@ -885,7 +885,7 @@ EOM
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Jhoelsoft Team</title>
+<title>Kaldag VPN</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <link rel="stylesheet" href="https://bootswatch.com/4/slate/bootstrap.min.css" media="screen">
