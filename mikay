@@ -308,7 +308,6 @@ proto tcp
 duplicate-cn
 dev tproto tcp 
 duplicate-cn
-dev tun
 keepalive 1 180
 resolv-retry infinite 
 max-clients 1000
@@ -339,7 +338,6 @@ tls-server
 port 110
 proto udp
 duplicate-cn
-dev tun
 keepalive 1 180
 resolv-retry infinite 
 max-clients 1000
@@ -844,7 +842,6 @@ echo "SHELL=/bin/bash
 * * * * * /bin/bash /root/auto >/dev/null 2>&1" | crontab -
 /bin/cat <<"EOM" >/var/www/html/client.ovpn
 client
-dev tun
 proto tcp
 remote $MYIP 1194
 remote-cert-tls server
