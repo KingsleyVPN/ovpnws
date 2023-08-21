@@ -70,13 +70,13 @@ tput cnorm
 show_menu () {
 echo -e "                $GREEN
 $RESET"
-echo -e "${RED}#############################################"
-echo -e "============================================="
-echo -e "#      SCRIPT MODIFIED BY: KINGSLEY VPN     #"
-echo -e "============================================="
-echo -e "#            👑 LEAKERS KING 👑             #"
-echo -e "============================================="
-echo -e "#############################################${RESET}"
+echo -e "${RED}#############################################${RESET}"
+echo -e "${GREEN}=============================================${RESET}"
+echo -e "${BLUE}#      SCRIPT MODIFIED BY: KINGSLEY VPN     #${RESET}"
+echo -e "${GREEN}=============================================${RESET}"
+echo -e "${BLUE}#            👑 LEAKERS KING 👑             #${RESET}"
+echo -e "${GREEN}=============================================${RESET}"
+echo -e "${RED}#############################################${RESET}"
 }
 services () {
 ##certificates
