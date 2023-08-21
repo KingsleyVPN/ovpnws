@@ -69,13 +69,14 @@ tput cnorm
 }
 show_menu () {
 echo -e "                $GREEN
-
 $RESET"
- 
- echo -e "                $RED
-    
-                 OPENVPN OVER WEBSOCKET 2023
-$RESET"
+echo -e "${RED}#############################################"
+echo -e "============================================="
+echo -e "#      SCRIPT MODIFIED BY: KINGSLEY VPN     #"
+echo -e "============================================="
+echo -e "#            👑 LEAKERS KING 👑             #"
+echo -e "============================================="
+echo -e "#############################################${RESET}"
 }
 services () {
 ##certificates
